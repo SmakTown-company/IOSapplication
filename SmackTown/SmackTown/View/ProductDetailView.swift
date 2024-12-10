@@ -82,13 +82,19 @@ struct ProductDetailView: View {
                     
                     // Последний HStack с Stepper, Text и Button
                     HStack {
-                        Stepper("", value: $count, in: 1...10000)
-                            // Отступ между Stepper и Text
-                        
-                        Text("\(self.count)")
-                            .font(.custom("Montserrat-Regular", size: 18))
-                            .foregroundColor(.white)
-                            .padding(.trailing, 40) 
+                        HStack {
+                            Stepper("", value: $count, in: 1...10000)
+                                .labelsHidden() // Скрываем стандартные метки Stepper
+                                .padding(.horizontal, 10) // Добавляем горизонтальный отступ для Stepper
+                            
+                            Text("\(self.count)")
+                                .font(.custom("Montserrat-Bold", size: 20))
+                                .foregroundColor(.white)
+                                .padding(.trailing, 20) // Увеличиваем отступ справа
+                        }
+                        .frame(width: 180, height: 60) // Увеличиваем размер Stepper
+                        .background(Color("buttonCount", bundle: nil))
+                        .cornerRadius(10)
                         
                         Spacer() // Пробел между Text и Button
                         
@@ -99,7 +105,7 @@ struct ProductDetailView: View {
                                 .font(.custom("Montserrat-Bold", size: 18)) // Увеличиваем шрифт текста кнопки
                                 .foregroundColor(.white) // Цвет текста
                                 .padding() // Добавляем внутренние отступы
-                                .frame(width: 150, height: 50) // Задаем размер кнопки
+                                .frame(width: 180, height: 60) // Увеличиваем размер кнопки
                                 .background(Color("orange", bundle: nil)) // Задаем цвет фона
                                 .cornerRadius(10) // Скругляем углы кнопки
                         }
