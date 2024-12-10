@@ -17,4 +17,5 @@ struct Product {
     var category_id:String
     var shop: String
     var percentOfSale: Int?
+    var descript: String?
 }

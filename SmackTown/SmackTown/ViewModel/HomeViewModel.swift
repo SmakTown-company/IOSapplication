@@ -13,10 +13,10 @@ class HomeViewModel:ObservableObject {
     static let shared = HomeViewModel()
     
     var products = [
-        Product(id: "1", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33),
-        Product(id: "2", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33),
-        Product(id: "3", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33),
-        Product(id: "4", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33)
+        Product(id: "1", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33, descript: "Кока-Кола — это не просто газировка, это настоящая традиция, которая сопровождает нас в самых важных моментах жизни. Будь то встреча с друзьями, семейный ужин или просто время для отдыха, Кока-Кола всегда поддержит вас своим освежающим вкусом."),
+        Product(id: "2", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33,descript: "Кока-Кола — это не просто газировка, это настоящая традиция, которая сопровождает нас в самых важных моментах жизни. Будь то встреча с друзьями, семейный ужин или просто время для отдыха, Кока-Кола всегда поддержит вас своим освежающим вкусом."),
+        Product(id: "3", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33,descript: "Кока-Кола — это не просто газировка, это настоящая традиция, которая сопровождает нас в самых важных моментах жизни. Будь то встреча с друзьями, семейный ужин или просто время для отдыха, Кока-Кола всегда поддержит вас своим освежающим вкусом."),
+        Product(id: "4", title: "Кока Кола 0.5", imageUrl: "Not Found", price: 150, sale: 100, category_id: "water", shop: "ПУД", percentOfSale: -33,descript: "Кока-Кола — это не просто газировка, это настоящая традиция, которая сопровождает нас в самых важных моментах жизни. Будь то встреча с друзьями, семейный ужин или просто время для отдыха, Кока-Кола всегда поддержит вас своим освежающим вкусом.")
     ]
     
 }
