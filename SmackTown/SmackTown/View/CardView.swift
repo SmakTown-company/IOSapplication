@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct CardView: View {
+    
     var viewModel: CardViewModel
+    
     var body: some View {
-        Text("ss")
+        
+        VStack {
+            List(viewModel.positions) { position in
+                PositionCell(positiopn: position)
+                
+            }.listStyle(.plain)
+                .navigationTitle("Корзина")
+            
+            HStack {
+                Text("Итого:")
+                Spacer()
+                Text("38383")
+            }.padding()
+        }
     }
 }
 #Preview {
