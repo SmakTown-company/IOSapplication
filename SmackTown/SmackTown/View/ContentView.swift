@@ -23,7 +23,7 @@ struct ContentView: View {
                         Text("Главная")
                     }
                     .tag(0)
-                CardView(viewModel: CardViewModel())
+                CardView(viewModel: CardViewModel.shared)
                 
                     .tabItem {
                         Image(systemName: "basket.fill")

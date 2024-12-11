@@ -3,6 +3,7 @@ import SwiftUI
 struct ProductDetailView: View {
     @State private var tapOn = false
     @State private var count = 1
+    @Environment(\.presentationMode) var presentationMode
     var viewModel: ProductDetailViewModel
     
     init(viewModel: ProductDetailViewModel) {
@@ -99,7 +100,10 @@ struct ProductDetailView: View {
                         Spacer() // Пробел между Text и Button
                         
                         Button {
-                            tapOn = true
+                            let position = Positions(id: UUID().uuidString, product: viewModel.product, count: self.count)
+                                CardViewModel.shared.addPosition(position)
+                                presentationMode.wrappedValue.dismiss()
+                            
                         } label: {
                             Text("В КОРЗИНУ")
                                 .font(.custom("Montserrat-Bold", size: 18)) // Увеличиваем шрифт текста кнопки

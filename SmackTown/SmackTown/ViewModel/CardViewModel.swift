@@ -7,6 +7,13 @@
 
 import Foundation
 class CardViewModel: ObservableObject {
+    
+    static let shared = CardViewModel()
+    
+    private init() {
+        
+    }
+    
     @Published var positions = [Positions]()
     
     var cost: Int {
